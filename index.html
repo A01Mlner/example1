@@ -57,12 +57,24 @@
         h2 {
             color: #4CAF50;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
+        .command {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 10px 0;
+        }
+        .command button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .command button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -87,6 +99,33 @@
                 <li>Using GitHub and GitLab</li>
             </ul>
             <p>Whether you’re working on personal projects or collaborating with a team, mastering Git is essential for efficient development!</p>
+        </section>
+        <section id="commands">
+            <h2>Basic Git Commands</h2>
+            <div class="command">
+                <span>Clone a repository:</span>
+                <button onclick="copyToClipboard('git clone [repository-url]')">Copy</button>
+            </div>
+            <div class="command">
+                <span>Add changes to staging:</span>
+                <button onclick="copyToClipboard('git add .')">Copy</button>
+            </div>
+            <div class="command">
+                <span>Commit changes:</span>
+                <button onclick="copyToClipboard('git commit -m \"your commit message\"')">Copy</button>
+            </div>
+            <div class="command">
+                <span>Push changes to remote:</span>
+                <button onclick="copyToClipboard('git push origin [branch-name]')">Copy</button>
+            </div>
+            <div class="command">
+                <span>Pull latest changes:</span>
+                <button onclick="copyToClipboard('git pull origin [branch-name]')">Copy</button>
+            </div>
+            <div class="command">
+                <span>Create a new branch:</span>
+                <button onclick="copyToClipboard('git checkout -b [new-branch-name]')">Copy</button>
+            </div>
         </section>
         <section id="resources">
             <h2>Resources</h2>
@@ -114,5 +153,15 @@
     <footer>
         <p>&copy; 2024 Wednesday Git Training. All rights reserved.</p>
     </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard: ' + text);
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
