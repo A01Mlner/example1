@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .ip-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ip {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>IP Address Information</h1>
+    <div class="ip-info">
+        <div class="ip" id="local-ip">Local IP: </div>
+        <div class="ip" id="public-ip">Public IP: </div>
+    </div>
+
+    <script>
+        // Function to get local IP
+        function getLocalIP() {
+            const localIP = window.location.hostname;
+            document.getElementById('local-ip').innerText = 'Local IP: ' + localIP;
+        }
+
+        // Function to get public IP
+        function getPublicIP() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('public-ip').innerText = 'Public IP: ' + data.ip;
+                })
+                .catch(error => {
+                    console.error('Error fetching public IP:', error);
+                });
+        }
+
+        // Execute the functions
+        getLocalIP();
+        getPublicIP();
+    </script>
+</body>
+</html>
