@@ -21,26 +21,48 @@
             margin: 20px 0;
         }
         nav a {
-            margin: 0 15px;
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
             text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #45a049;
+            transform: scale(1.05);
         }
         main {
             padding: 20px;
             text-align: center;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -56,20 +78,37 @@
     <main>
         <section id="about">
             <h2>About This Training</h2>
-            <p>Join us every Wednesday for an exciting journey into the world of Git! Learn the basics, collaborate with peers, and improve your version control skills.</p>
+            <p>Join us every Wednesday for an exciting journey into the world of Git! Our sessions are designed for everyone—from beginners to advanced users—looking to enhance their version control skills. Each week, we cover a different aspect of Git, including:</p>
+            <ul>
+                <li>Basic Commands (Clone, Add, Commit)</li>
+                <li>Branching and Merging</li>
+                <li>Resolving Conflicts</li>
+                <li>Collaboration Workflows</li>
+                <li>Using GitHub and GitLab</li>
+            </ul>
+            <p>Whether you’re working on personal projects or collaborating with a team, mastering Git is essential for efficient development!</p>
         </section>
         <section id="resources">
             <h2>Resources</h2>
             <p>Check out our curated list of resources to help you master Git:</p>
             <ul>
-                <li><a href="https://git-scm.com/doc" target="_blank">Git Documentation</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-                <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></li>
+                <li><a href="https://git-scm.com/doc" target="_blank">Git Documentation</a> - The official documentation for in-depth understanding.</li>
+                <li><a href="https://github.com" target="_blank">GitHub</a> - A platform for hosting and collaborating on Git repositories.</li>
+                <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a> - Comprehensive tutorials and guides for all skill levels.</li>
+                <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching</a> - An interactive way to learn branching and merging.</li>
+                <li><a href="https://www.codecademy.com/learn/learn-git" target="_blank">Codecademy Git Course</a> - An online course to get hands-on experience with Git.</li>
             </ul>
+            <p>Don’t forget to practice what you learn! Create your own repositories and experiment with different commands.</p>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Have questions? Feel free to reach out at <a href="mailto:info@example.com">info@example.com</a>.</p>
+            <p>Have questions? We’d love to hear from you! Feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
+                <li>Follow us on <a href="https://twitter.com/example" target="_blank">Twitter</a></li>
+                <li>Join our community on <a href="https://discord.gg/example" target="_blank">Discord</a></li>
+            </ul>
+            <p>We also encourage feedback and suggestions for future topics!</p>
         </section>
     </main>
     <footer>
