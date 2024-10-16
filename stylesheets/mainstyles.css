@@ -2,3 +2,10 @@ body {
     background-color: rgb(29, 29, 29);
     color: rgb(255, 255, 255);
 }
+h1{
+    font-family: 'Times New Roman', Times, serif
+
+}
+li{
+    color: cyan;
+}
